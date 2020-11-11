@@ -40,11 +40,6 @@ public class BasicMovement : MonoBehaviour
     {
         rb.MovePosition(rb.position + movement * moveSpeed * Time.deltaTime);
 
-        Vector2 lookDir = mousePos - rb.position;
-        float theta = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
-
-        rb.rotation = theta;
-
 
     }
 
