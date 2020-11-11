@@ -332,7 +332,7 @@ MonoBehaviour:
   m_UseRendererSilhouette: 1
   m_CastsShadows: 1
   m_SelfShadows: 0
-  m_ApplyToSortingLayers: 8d129095e9b18ce5000000003d1a3d4f
+  m_ApplyToSortingLayers: 8d129095e9b18ce500000000
   m_ShapePath:
   - {x: -0.74793684, y: -0.9169848, z: 0}
   - {x: -0.44103417, y: -0.92261994, z: 0}
@@ -419,12 +419,12 @@ PrefabInstance:
     - target: {fileID: 5283173372416382206, guid: fb1fb5f39d961448fbde43f0829ed340,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.59
+      value: -1.45
       objectReference: {fileID: 0}
     - target: {fileID: 5283173372416382206, guid: fb1fb5f39d961448fbde43f0829ed340,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.37
+      value: 0.46
       objectReference: {fileID: 0}
     - target: {fileID: 5283173372416382206, guid: fb1fb5f39d961448fbde43f0829ed340,
         type: 3}
@@ -557,7 +557,7 @@ MonoBehaviour:
   m_UseRendererSilhouette: 1
   m_CastsShadows: 1
   m_SelfShadows: 0
-  m_ApplyToSortingLayers: 8d129095e9b18ce5000000003d1a3d4f
+  m_ApplyToSortingLayers: 8d129095e9b18ce500000000
   m_ShapePath:
   - {x: -1.0880095, y: -2.211259, z: 0}
   - {x: -0.19354998, y: -2.211259, z: 0}
@@ -852,7 +852,7 @@ MonoBehaviour:
   m_UseRendererSilhouette: 1
   m_CastsShadows: 1
   m_SelfShadows: 0
-  m_ApplyToSortingLayers: 8d129095e9b18ce5000000003d1a3d4f
+  m_ApplyToSortingLayers: 8d129095e9b18ce500000000
   m_ShapePath:
   - {x: -0.72055805, y: -0.850631, z: 0}
   - {x: 0.55372566, y: -0.859114, z: 0}
@@ -917,7 +917,7 @@ MonoBehaviour:
   m_UseRendererSilhouette: 1
   m_CastsShadows: 1
   m_SelfShadows: 0
-  m_ApplyToSortingLayers: 8d129095e9b18ce5000000003d1a3d4f
+  m_ApplyToSortingLayers: 8d129095e9b18ce500000000
   m_ShapePath:
   - {x: -1.2795604, y: -0.3149239, z: 0}
   - {x: 1.2066532, y: -0.30931568, z: 0}
@@ -982,7 +982,7 @@ MonoBehaviour:
   m_UseRendererSilhouette: 1
   m_CastsShadows: 1
   m_SelfShadows: 0
-  m_ApplyToSortingLayers: 8d129095e9b18ce5000000003d1a3d4f
+  m_ApplyToSortingLayers: 8d129095e9b18ce500000000
   m_ShapePath:
   - {x: -0.6738508, y: 0.527581, z: 0}
   - {x: -0.14588833, y: 0.529714, z: 0}
@@ -1087,7 +1087,7 @@ MonoBehaviour:
   m_UseRendererSilhouette: 1
   m_CastsShadows: 1
   m_SelfShadows: 0
-  m_ApplyToSortingLayers: 8d129095e9b18ce5000000003d1a3d4f
+  m_ApplyToSortingLayers: 8d129095e9b18ce500000000
   m_ShapePath:
   - {x: -0.49289006, y: -2.6900325, z: 0}
   - {x: 0.39502317, y: -2.6970377, z: 0}
@@ -1148,7 +1148,7 @@ MonoBehaviour:
   m_UseRendererSilhouette: 1
   m_CastsShadows: 1
   m_SelfShadows: 0
-  m_ApplyToSortingLayers: 8d129095e9b18ce5000000003d1a3d4f
+  m_ApplyToSortingLayers: 8d129095e9b18ce500000000
   m_ShapePath:
   - {x: -2.809492, y: -0.057756644, z: 0}
   - {x: -2.7523017, y: -0.5986136, z: 0}
@@ -1494,7 +1494,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1111487907}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.59, y: 1.37, z: -10}
+  m_LocalPosition: {x: -1.45, y: 0.46000004, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2639,7 +2639,7 @@ MonoBehaviour:
   m_UseRendererSilhouette: 1
   m_CastsShadows: 1
   m_SelfShadows: 0
-  m_ApplyToSortingLayers: 8d129095e9b18ce5000000003d1a3d4f
+  m_ApplyToSortingLayers: 8d129095e9b18ce500000000
   m_ShapePath:
   - {x: -0.4557942, y: -2.524055, z: 0}
   - {x: 0.44242296, y: -2.524055, z: 0}
