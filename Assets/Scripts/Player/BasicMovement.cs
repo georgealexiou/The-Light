@@ -5,46 +5,46 @@ using UnityEngine;
 public class BasicMovement : MonoBehaviour
 {
 
-    //public variables
-    public float speed = 5f, torque = 0f;
-    public Vector2 maxVelocity;
+
+    public float moveSpeed = 5f;
     public Rigidbody2D rb;
     public Camera cam;
 
-    //private variables
+
     private Vector2 movement;
+    private Vector2 mousePos;
 
 
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-
        
     }
 
     private void Update()
     {
+
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
+
+        //animator.SetFloat("Horizontal", movement.x);
+        //animator.SetFloat("Vertical", movement.y);
+        //animator.SetFloat("Magnitude", movement.magnitude);
+
+        mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
 
     }
 
 
     private void FixedUpdate()
     {
+        rb.MovePosition(rb.position + movement * moveSpeed * Time.deltaTime);
 
-        Debug.Log(movement);
-        if(movement != Vector2.zero)
-        {
-            
-            //rb.AddForce(new Vector2(movement.x * speed, movement.y * speed));
-            rb.MovePosition(rb.position + (movement * speed) * Time.deltaTime);
-        }
+        Vector2 lookDir = mousePos - rb.position;
+        float theta = Mathf.Atan2(lookDir.y, lookDir.x) * Mathf.Rad2Deg - 90f;
 
-        else
-        {
-            rb.velocity -= 0.05f * rb.velocity;
-        }
+        rb.rotation = theta;
+
 
     }
 

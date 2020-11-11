@@ -1,12 +1,6 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:Assets/Prefabs/PlayerLight.prefab.meta
 guid: a14a1c160af074c50a6c95a63a6eefd9
 PrefabImporter:
-=======
-guid: 431940814316c414984b7ab799c37910
-folderAsset: yes
-DefaultImporter:
->>>>>>> Lighting:Assets/Materials.meta
   externalObjects: {}
   userData: 
   assetBundleName: 
