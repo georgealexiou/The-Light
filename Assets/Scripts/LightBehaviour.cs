@@ -34,8 +34,12 @@ public class LightBehaviour : MonoBehaviour
         else
             light.color = gradient.Evaluate(distance / totalDistance);
 
+        float newIntensity = currentTime / timeLimit;
+
         light.intensity = intensity * (currentTime / timeLimit);
         currentTime -= 1;
 
+        if (light.intensity == 0.2)
+            Debug.Log("YOU LOST");
     }
 }
