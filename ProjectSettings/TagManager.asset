@@ -40,15 +40,18 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Background2
-    uniqueID: 2509247117
-    locked: 0
   - name: Background
     uniqueID: 3851203049
     locked: 0
-  - name: Default
-    uniqueID: 0
+  - name: Moving Parts
+    uniqueID: 3036191813
     locked: 0
   - name: Foreground
     uniqueID: 1329404477
+    locked: 0
+  - name: Borders
+    uniqueID: 3798733427
+    locked: 0
+  - name: Default
+    uniqueID: 0
     locked: 0

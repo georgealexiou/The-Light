@@ -24,7 +24,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5283173371048650363}
-  m_LocalRotation: {x: -0, y: -0, z: -0.13006018, w: 0.99150616}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -45,21 +45,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.77
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
-  m_LightVolumeOpacity: 0.27
-  m_ApplyToSortingLayers: e9b18ce5
+  m_FalloffIntensity: 0.957
+  m_Color: {r: 0.9433962, g: 0.6410888, b: 0.4672481, a: 1}
+  m_Intensity: 0.8
+  m_LightVolumeOpacity: 0
+  m_ApplyToSortingLayers: e9b18ce5000000003d1a3d4f
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0
-  m_AlphaBlendOnOverlap: 0
-  m_ShadowIntensity: 0.83
-  m_ShadowVolumeIntensity: 0.62
+  m_AlphaBlendOnOverlap: 1
+  m_ShadowIntensity: 0.848
+  m_ShadowVolumeIntensity: 0.632
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 9
+  m_PointLightOuterRadius: 13
   m_PointLightDistance: 3
   m_PointLightQuality: 1
   m_ShapeLightParametricSides: 5
@@ -83,8 +83,8 @@ GameObject:
   - component: {fileID: 5283173372416382206}
   - component: {fileID: 5283173372416382207}
   - component: {fileID: 5283173372416382176}
+  - component: {fileID: 8266279254195416170}
   - component: {fileID: 5283173372416382177}
-  - component: {fileID: 5283173372416382205}
   - component: {fileID: 207581943953544483}
   m_Layer: 0
   m_Name: Player
@@ -126,7 +126,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
+  - {fileID: 2100000, guid: 9dfc825aed78fcd4ba02077103263b40, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -144,11 +144,11 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
-  m_SortingLayerID: 0
-  m_SortingLayer: 0
+  m_SortingLayerID: -1258775483
+  m_SortingLayer: -3
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 087357fb242cc4788b95d20b0d6e692f, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 0.8490566, g: 0.5073513, b: 0.3964934, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -179,20 +179,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!114 &5283173372416382177
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5283173372416382178}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: aa2d8e6af28944e0da0669221f6b0a5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!61 &5283173372416382205
-BoxCollider2D:
+--- !u!70 &8266279254195416170
+CapsuleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -205,19 +193,9 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.9296875, y: 1.09375}
-    newSize: {x: 1, y: 1}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  serializedVersion: 2
-  m_Size: {x: 0.8516668, y: 0.8330459}
-  m_EdgeRadius: 0
---- !u!114 &207581943953544483
+  m_Size: {x: 0.3981764, y: 0.6630786}
+  m_Direction: 0
+--- !u!114 &5283173372416382177
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -226,17 +204,32 @@ MonoBehaviour:
   m_GameObject: {fileID: 5283173372416382178}
   m_Enabled: 1
   m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: aa2d8e6af28944e0da0669221f6b0a5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveSpeed: 25
+  rb: {fileID: 5283173372416382176}
+  cam: {fileID: 0}
+--- !u!114 &207581943953544483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5283173372416382178}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b40baa91e16de4497b91d4e1d28611c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  light: {fileID: 0}
+  light: {fileID: 5283173371048650362}
   exit: {fileID: 0}
   start: {fileID: 0}
   gradient:
     serializedVersion: 2
-    key0: {r: 1, g: 1, b: 1, a: 1}
-    key1: {r: 1, g: 1, b: 1, a: 1}
-    key2: {r: 0, g: 0, b: 0, a: 0}
+    key0: {r: 0.7257215, g: 0.07075471, b: 1, a: 1}
+    key1: {r: 0.08018869, g: 0.9003075, b: 1, a: 1}
+    key2: {r: 1, g: 0.3820755, b: 0.3820755, a: 1}
     key3: {r: 0, g: 0, b: 0, a: 0}
     key4: {r: 0, g: 0, b: 0, a: 0}
     key5: {r: 0, g: 0, b: 0, a: 0}
@@ -244,15 +237,15 @@ MonoBehaviour:
     key7: {r: 0, g: 0, b: 0, a: 0}
     ctime0: 0
     ctime1: 65535
-    ctime2: 0
+    ctime2: 65535
     ctime3: 0
     ctime4: 0
     ctime5: 0
     ctime6: 0
     ctime7: 0
     atime0: 0
-    atime1: 65535
-    atime2: 0
+    atime1: 48573
+    atime2: 65535
     atime3: 0
     atime4: 0
     atime5: 0
@@ -260,8 +253,7 @@ MonoBehaviour:
     atime7: 0
     m_Mode: 0
     m_NumColorKeys: 2
-    m_NumAlphaKeys: 2
-  timeLimit: 1800
+    m_NumAlphaKeys: 3
+  enableBehaviour: 1
+  timeLimit: 2000
   intensity: 1.5
-  maxOuterRadius: 9
-  maxInnerRadius: 1
