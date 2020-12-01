@@ -32,12 +32,12 @@ public class LightBehaviour : MonoBehaviour
     void Start()
     {
 
-        if(!levelHasKey)
+        if (!levelHasKey)
             distance = Vector2.Distance(player.transform.position, exit.transform.position);
         else
         {
             distanceToKey = Vector2.Distance(player.transform.position, key.transform.position);
-            distanceToExit = Vector2.Distance(key.transform.position, exit.transform.position);   
+            distanceToExit = Vector2.Distance(key.transform.position, exit.transform.position);
         }
 
         currentTime = timeLimit;
@@ -53,14 +53,43 @@ public class LightBehaviour : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(currentTime <= 0) {
+        if (currentTime <= 0)
+        {
             GameObject.FindGameObjectWithTag("Player").SetActive(false);
             levelFailedUI.SetActive(true);
         }
 
-        if (levelHasKey)
+        if (enableColour && enableIntensity)
         {
-            if (keyCollected)
+            if (levelHasKey)
+            {
+                if (keyCollected)
+                {
+                    distance = Vector2.Distance(transform.position, exit.transform.position);
+
+                    if (distance > distanceToExit)
+                        light.color = gradient2.Evaluate(1f);
+                    else
+                        light.color = gradient2.Evaluate(distance / distanceToExit);
+
+                    light.intensity = intensity * (currentTime / timeLimit);
+                    currentTime -= 1;
+                }
+
+                else
+                {
+                    distance = Vector2.Distance(transform.position, key.transform.position);
+
+                    if (distance > distanceToKey)
+                        light.color = gradient1.Evaluate(1f);
+                    else
+                        light.color = gradient1.Evaluate(distance / distanceToKey);
+
+                    light.intensity = intensity * (currentTime / timeLimit);
+                    currentTime -= 1;
+                }
+            }
+            else
             {
                 distance = Vector2.Distance(transform.position, exit.transform.position);
 
@@ -72,31 +101,6 @@ public class LightBehaviour : MonoBehaviour
                 light.intensity = intensity * (currentTime / timeLimit);
                 currentTime -= 1;
             }
-
-            else
-            {
-                distance = Vector2.Distance(transform.position, key.transform.position);
-
-                if (distance > distanceToKey)
-                    light.color = gradient1.Evaluate(1f);
-                else
-                    light.color = gradient1.Evaluate(distance / distanceToKey);
-
-                light.intensity = intensity * (currentTime / timeLimit);
-                currentTime -= 1;
-            }
-        }
-        else
-        {
-            distance = Vector2.Distance(transform.position, exit.transform.position);
-
-            if (distance > distanceToExit)
-                light.color = gradient2.Evaluate(1f);
-            else
-                light.color = gradient2.Evaluate(distance / distanceToExit);
-
-            light.intensity = intensity * (currentTime / timeLimit);
-            currentTime -= 1;
         }
 
     }
