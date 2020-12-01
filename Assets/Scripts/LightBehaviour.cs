@@ -10,9 +10,10 @@ public class LightBehaviour : MonoBehaviour
     public GameObject exit;
     public GameObject start;
     public Gradient gradient;
+    public GameManager gameManager;
 
-    public bool enableBehaviour = true;
-    public float timeLimit = 1800;
+    public bool enableColorsShift = true, enableIntensityShift = true;
+    public float timeLimit = 1800f;
     public float intensity = 1.5f;
 
     private float distance;
@@ -25,18 +26,17 @@ public class LightBehaviour : MonoBehaviour
         totalDistance = Vector2.Distance(start.transform.position, exit.transform.position);
         currentTime = timeLimit;
 
-        if (!enableBehaviour)
-        {
+        if (!enableIntensityShift)
             light.intensity = intensity;
+
+        if(!enableColorsShift)
             light.color = gradient.Evaluate(1f);
-        }
     }
 
     // Update is called once per frame
     void Update()
     {
-
-        if (enableBehaviour)
+        if (enableColorsShift)
         {
             distance = Vector2.Distance(transform.position, exit.transform.position);
 
@@ -44,9 +44,15 @@ public class LightBehaviour : MonoBehaviour
                 light.color = gradient.Evaluate(1f);
             else
                 light.color = gradient.Evaluate(distance / totalDistance);
+        }
 
+        if (enableIntensityShift)
+        {
             light.intensity = intensity * (currentTime / timeLimit);
             currentTime -= 1;
+
+            if (light.intensity < 0.2f)
+                gameManager.onLevelFailure();
         }
 
     }
