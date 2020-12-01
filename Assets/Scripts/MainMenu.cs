@@ -34,7 +34,20 @@ public class MainMenu : MonoBehaviour
 
     public void loadMainMenu()
     {
-        SceneManager.LoadScene("TitleScreenWIP");
+        SceneManager.LoadScene("TtitleScreenWIP");
+    }
+
+    public void loadNext()
+    {
+        if(SceneManager.GetActiveScene().buildIndex == SceneManager.sceneCountInBuildSettings - 1)
+        {
+            loadMainMenu();
+        }
+        else
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+        }
+        
     }
 }
  

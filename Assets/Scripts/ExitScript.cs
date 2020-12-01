@@ -6,26 +6,31 @@ using UnityEngine.SceneManagement;
 public class ExitScript : MonoBehaviour
 {
     public GameObject completeLevelUI;
-    public GameObject levelFailedUI;
     private GameObject player;
+    private bool keyCollected, levelHasKey;
 
     public void Start()
     {
         completeLevelUI.SetActive(false);
-        levelFailedUI.SetActive(false);
 
         player = GameObject.Find("Player");
+        levelHasKey = player.GetComponent<LightBehaviour>().levelHasKey;
+        keyCollected = player.GetComponent<LightBehaviour>().keyCollected;
+
+
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        GameObject player = GameObject.Find("Player");
+        keyCollected = player.GetComponent<LightBehaviour>().keyCollected;
 
-        if (player.GetComponent<LightBehaviour>().keyCollected == true)
+        if (!levelHasKey || keyCollected)
         {
             completeLevelUI.SetActive(true);
+            Time.timeScale = 1f;
             player.GetComponent<Player>().enabled = false;
             player.GetComponent<LightBehaviour>().enabled = false;
         }
+       
     }
 }

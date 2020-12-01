@@ -33,7 +33,7 @@ public class LightBehaviour : MonoBehaviour
     {
 
         if (!levelHasKey)
-            distance = Vector2.Distance(player.transform.position, exit.transform.position);
+            distanceToExit = Vector2.Distance(player.transform.position, exit.transform.position);
         else
         {
             distanceToKey = Vector2.Distance(player.transform.position, key.transform.position);
