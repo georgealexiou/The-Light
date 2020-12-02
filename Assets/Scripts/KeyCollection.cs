@@ -19,6 +19,7 @@ public class KeyCollection : MonoBehaviour
 
     public void OnTriggerEnter2D(Collider2D collision)
     {
+        FindObjectOfType<SoundManager>().Play("Key");
         Color color = player.GetComponent<LightBehaviour>().gradient1.Evaluate(0f);
         exit.GetComponent<SpriteRenderer>().color = color;
 

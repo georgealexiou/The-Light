@@ -55,6 +55,7 @@ public class LightBehaviour : MonoBehaviour
     {
         if (currentTime <= 0)
         {
+            FindObjectOfType<SoundManager>().Play("Fail");
             GameObject.FindGameObjectWithTag("Player").SetActive(false);
             levelFailedUI.SetActive(true);
         }
@@ -100,6 +101,7 @@ public class LightBehaviour : MonoBehaviour
 
                 light.intensity = intensity * (currentTime / timeLimit);
                 currentTime -= 1;
+
             }
         }
 

@@ -26,7 +26,10 @@ public class ExitScript : MonoBehaviour
 
         if (!levelHasKey || keyCollected)
         {
+            FindObjectOfType<SoundManager>().Play("Completed");
             completeLevelUI.SetActive(true);
+
+
             Time.timeScale = 1f;
             player.GetComponent<Player>().enabled = false;
             player.GetComponent<LightBehaviour>().enabled = false;
