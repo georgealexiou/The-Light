@@ -15,7 +15,7 @@ public class Player : MonoBehaviour
         controls = new PlayerMovement();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         Vector2 movementInput = controls.Player.Movement.ReadValue<Vector2>().normalized;
         //Changed the move procedure as well as rotation

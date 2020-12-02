@@ -33,7 +33,7 @@ public class LightBehaviour : MonoBehaviour
     {
 
         if (!levelHasKey)
-            distance = Vector2.Distance(player.transform.position, exit.transform.position);
+            distanceToExit = Vector2.Distance(player.transform.position, exit.transform.position);
         else
         {
             distanceToKey = Vector2.Distance(player.transform.position, key.transform.position);
@@ -55,6 +55,7 @@ public class LightBehaviour : MonoBehaviour
     {
         if (currentTime <= 0)
         {
+            FindObjectOfType<SoundManager>().Play("Fail");
             GameObject.FindGameObjectWithTag("Player").SetActive(false);
             levelFailedUI.SetActive(true);
         }
@@ -100,6 +101,7 @@ public class LightBehaviour : MonoBehaviour
 
                 light.intensity = intensity * (currentTime / timeLimit);
                 currentTime -= 1;
+
             }
         }
 
