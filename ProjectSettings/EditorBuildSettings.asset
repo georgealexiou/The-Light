@@ -17,15 +17,15 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/BreakableWalls.unity
     guid: 50b2872a027da4d5cb93b2093cff8342
-  - enabled: 0
-    path: Assets/Scenes/KeyScene.unity
-    guid: 2dfb78852e87f4c2a8942fd75b1a3257
   - enabled: 1
     path: Assets/Scenes/FirstLevel.unity
     guid: 6e8f4eef3eeec47e3bd0ef0d288539ab
   - enabled: 1
     path: Assets/Scenes/SecondLevel.unity
     guid: c0ea73ffda02545608d73b506692b92a
+  - enabled: 1
+    path: Assets/Scenes/ThirdLevel.unity
+    guid: 2dfb78852e87f4c2a8942fd75b1a3257
   m_configObjects:
     com.unity.input.settings: {fileID: 11400000, guid: 802a434e19bda4c749e000768420e20f,
       type: 2}
