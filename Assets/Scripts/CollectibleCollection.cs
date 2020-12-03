@@ -26,4 +26,11 @@ public class CollectibleCollection : MonoBehaviour
             gameObject.SetActive(false);
         }
     }
+
+    public void FixedUpdate()
+    {
+        Vector3 rotation = new Vector3(0f, 0f, 50f);
+        transform.Rotate(rotation * Time.deltaTime);
+    }
+
 }
