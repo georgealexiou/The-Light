@@ -10,6 +10,11 @@ public class Player : MonoBehaviour
     float smoothVelocity;
     public Rigidbody2D rb;
 
+    public GameObject tutorial;
+    public bool isTutorial = false;
+
+    public int collectible = 0;
+
     void Awake()
     {
         controls = new PlayerMovement();
@@ -26,22 +31,14 @@ public class Player : MonoBehaviour
             transform.rotation = Quaternion.Euler(0f, 0f, rotationAngle);
 
             rb.MovePosition(rb.position + movementInput * moveSpeed * Time.deltaTime);
+
+            if (isTutorial)
+            {
+                tutorial.GetComponent<TutorialManager>().playerMoved = true;
+                isTutorial = false;
+            }
         }
 
-        //move(movementInput);
-    }
-
-    void move(Vector2 movement)
-    {
-        rb.MovePosition(rb.position + movement * moveSpeed * Time.deltaTime);
-
-        float angle;
-        if (movement.x < 0)
-            angle = (Mathf.Atan2(movement.x, movement.y) * Mathf.Rad2Deg * -1);
-        else
-            angle = 360 - (Mathf.Atan2(movement.x, movement.y) * Mathf.Rad2Deg);
-
-        rb.MoveRotation(angle);
     }
 
     private void OnEnable()

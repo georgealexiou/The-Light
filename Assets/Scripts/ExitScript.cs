@@ -9,6 +9,7 @@ public class ExitScript : MonoBehaviour
     private GameObject player;
     private bool keyCollected, levelHasKey;
 
+
     public void Start()
     {
         completeLevelUI.SetActive(false);
@@ -28,6 +29,7 @@ public class ExitScript : MonoBehaviour
         {
             FindObjectOfType<SoundManager>().Play("Completed");
             completeLevelUI.SetActive(true);
+            
 
 
             Time.timeScale = 1f;

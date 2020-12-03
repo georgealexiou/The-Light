@@ -20,7 +20,7 @@ public class LightBehaviour : MonoBehaviour
 
     public float timeLimit = 1800;
     public float timeToLose = 200;
-    public float intensity = 1.5f;
+    public float intensity = 0.8f;
 
     private float distance;
     private float distanceToKey;
